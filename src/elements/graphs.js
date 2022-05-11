@@ -44,7 +44,7 @@ function graphs({input,searchinput,setdisplay}) {
     
       const events = {
         select: function(event) {
-          var { nodes, edges } = event;
+          var {} = event;
         }
       };
     return (

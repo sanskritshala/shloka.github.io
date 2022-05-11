@@ -1,13 +1,11 @@
 import { useState} from 'react';
 import './App.css';
-import {FaArrowLeft, FaArrowRight, FaFacebookMessenger, FaSearch, FaSnapchat} from 'react-icons/fa'
+import {FaArrowLeft, FaArrowRight, FaFacebookMessenger, FaSearch,} from 'react-icons/fa'
 import Cards from './elements/cards';
 import Graphs from './elements/graphs';
 import data from './data/data.json'
 import Chatbox from './elements/chatbox';
-import $ from 'jquery'
 import {useCookies} from 'react-cookie'
-import Introscreen from './data/introscreen';
 function App() {
   const [suggestion,setsuggestion]=useState([]);
   const [cookie,setcookie]=useCookies(['visited']);
@@ -26,9 +24,7 @@ function App() {
 },
 ]);
 var instructions=['You can search for Shlokas Here','Recommended Shlokas similar to the searched shlokas are shown as cards in orange','The similarity between the shlokas are shown here','The contents of the selected shloka is shown here','This is the chatbot']
-setcookie('visited',-1)
-console.log(cookie)
-console.log(data.length)
+setcookie('visited',cookie.visited)
   const [toggle,settoggle]=useState('left');
   const [width,setwidth]=useState(window.innerWidth);
   window.addEventListener('resize',()=>{
@@ -61,7 +57,6 @@ console.log(data.length)
     setlistrecommendations(recommendationfill)
     
   }
-  console.log(cookie.visited)
   return (
     <div className="App"> 
     {cookie.visited==-1&&<div style={{
@@ -145,8 +140,7 @@ console.log(data.length)
       </div>}
       <div className='background' onClick={()=>{setsuggestionactive(false)}}  style={{height:'90vh',display:'flex',position:'relative',marginTop:suggestionactive>0?-228:0  }}>
         <div className='search' style={{width:width<600?width<400?'100%':'40%' :''}} >
-          {<div className='slider' style={{width:width<400?'100%':'',
-          width:openPanelLeft?' ':0,
+          {<div className='slider' style={{width:openPanelLeft?' ':0,
           paddingLeft:openPanelLeft?10:0,
         }}>
             <div className='list'   >
@@ -175,15 +169,15 @@ console.log(data.length)
             <div style={{paddingTop:10,display:'flex',justifyContent:'flex-end',paddingRight:10}} >
               <button className='togglebuttonleft' onClick={()=>{
                 settoggle('left');
-              }} style={{backgroundColor:toggle==='left'?'purple':'whitesmoke',color:toggle==='left'?'white':'black'}} >
+              }} style={{backgroundColor:toggle=='left'?'purple':'whitesmoke',color:toggle=='left'?'white':'black'}} >
                 Text
               </button>
               <button className='togglebuttonright' onClick={()=>{
                 settoggle('right')
-              }} style={{backgroundColor:toggle==='right'?'purple':'whitesmoke',color:toggle==='right'?'white':'black'}} >Graph</button>
+              }} style={{backgroundColor:toggle=='right'?'purple':'whitesmoke',color:toggle=='right'?'white':'black'}} >Graph</button>
               </div>
           </div>
-          {toggle==='left'? display.chapter? <div>
+          {toggle=='left'? display.chapter? <div>
             <Cards text1={search.shloka} chapter1={search.chapter} text2={display.shloka} chapter2={display.chapter} title="Shloka" /><br/>
             <Cards text1={search.purport} chapter1={search.chapter} text2={display.purport} chapter2={display.chapter} title="Purport" /><br/>
             <Cards text1={search.tranlation} chapter1={search.chapter} text2={display.tranlation} chapter2={display.chapter} title="Translation" />
@@ -268,5 +262,4 @@ console.log(data.length)
     </div>
   );
 }
-
 export default App;

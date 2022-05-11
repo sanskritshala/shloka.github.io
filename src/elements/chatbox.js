@@ -2,12 +2,11 @@ import React from 'react'
 import '../App.css'
 import $ from 'jquery';
 import { FaFacebookMessenger } from 'react-icons/fa';
-import {Loading} from 'react-loading-dot'
 import chatbot from '../images/chatbot.png'
 import TypeAnimation from 'react-type-animation'
-function chatbox({setval,val,data,cc,setcc,value,setvalue}) {
+function chatbox({setval,val,cc,setcc}) {
     $('.chatboxchatarea').css({'height':val?'90%':''})
-    var count=0,countval="user";
+    var count=0;
     var jj=[]
     var responses={
         "Select the topic or write your question below.":['Search','Shlokas','Chatbot','Graph','Text','Recommendations'],
@@ -70,7 +69,7 @@ function chatbox({setval,val,data,cc,setcc,value,setvalue}) {
                                 fontSize:12,
                                 textAlign:'left'
                             
-                            }} >{values.bot==jj[0].bot? <TypeAnimation sequence={[values.bot,1000]} />:<p>{values.bot} </p> } </p> 
+                            }} >{values.bot===jj[0].bot? <TypeAnimation sequence={[values.bot,1000]} />:<p>{values.bot} </p> } </p> 
                             </div>
                             }
                                 {values.user&&
@@ -125,7 +124,7 @@ function chatbox({setval,val,data,cc,setcc,value,setvalue}) {
                 id="chatinput"
                 onChange={()=>{
                     $('#chatinput').keypress((key)=>{
-                        if(key.which==13&&document.getElementById('chatinput').value.toString()>""){
+                        if(key.which===13&&document.getElementById('chatinput').value.toString()>""){
                             jj.reverse()
                             jj.push({'user':document.getElementById("chatinput").value.toString()})
                             setcc(jj)
