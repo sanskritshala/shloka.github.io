@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/shloka.github.io/static/css/main.2b0003ce.chunk.css",
-    "main.js": "/shloka.github.io/static/js/main.addd413e.chunk.js",
-    "main.js.map": "/shloka.github.io/static/js/main.addd413e.chunk.js.map",
-    "runtime-main.js": "/shloka.github.io/static/js/runtime-main.ff5445d4.js",
-    "runtime-main.js.map": "/shloka.github.io/static/js/runtime-main.ff5445d4.js.map",
-    "static/js/2.26956bda.chunk.js": "/shloka.github.io/static/js/2.26956bda.chunk.js",
-    "static/js/2.26956bda.chunk.js.map": "/shloka.github.io/static/js/2.26956bda.chunk.js.map",
-    "static/js/3.08ef3b7a.chunk.js": "/shloka.github.io/static/js/3.08ef3b7a.chunk.js",
-    "static/js/3.08ef3b7a.chunk.js.map": "/shloka.github.io/static/js/3.08ef3b7a.chunk.js.map",
+    "main.js": "/shloka.github.io/static/js/main.a68f854d.chunk.js",
+    "main.js.map": "/shloka.github.io/static/js/main.a68f854d.chunk.js.map",
+    "runtime-main.js": "/shloka.github.io/static/js/runtime-main.2b4f8406.js",
+    "runtime-main.js.map": "/shloka.github.io/static/js/runtime-main.2b4f8406.js.map",
+    "static/js/2.664ef004.chunk.js": "/shloka.github.io/static/js/2.664ef004.chunk.js",
+    "static/js/2.664ef004.chunk.js.map": "/shloka.github.io/static/js/2.664ef004.chunk.js.map",
+    "static/js/3.8e383581.chunk.js": "/shloka.github.io/static/js/3.8e383581.chunk.js",
+    "static/js/3.8e383581.chunk.js.map": "/shloka.github.io/static/js/3.8e383581.chunk.js.map",
     "index.html": "/shloka.github.io/index.html",
     "static/css/main.2b0003ce.chunk.css.map": "/shloka.github.io/static/css/main.2b0003ce.chunk.css.map",
-    "static/js/2.26956bda.chunk.js.LICENSE.txt": "/shloka.github.io/static/js/2.26956bda.chunk.js.LICENSE.txt",
+    "static/js/2.664ef004.chunk.js.LICENSE.txt": "/shloka.github.io/static/js/2.664ef004.chunk.js.LICENSE.txt",
     "static/media/chatbot.603a4b04.png": "/shloka.github.io/static/media/chatbot.603a4b04.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff5445d4.js",
-    "static/js/2.26956bda.chunk.js",
+    "static/js/runtime-main.2b4f8406.js",
+    "static/js/2.664ef004.chunk.js",
     "static/css/main.2b0003ce.chunk.css",
-    "static/js/main.addd413e.chunk.js"
+    "static/js/main.a68f854d.chunk.js"
   ]
 }
