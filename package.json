@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shloka.github.io/",
+  "homepage": "https://sanskritshala.github.io/shloka.github.io/",
   "dependencies": {
     "@tensorflow/tfjs": "^3.12.0",
     "@testing-library/jest-dom": "^5.16.1",
